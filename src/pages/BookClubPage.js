@@ -51,6 +51,8 @@ const BookClubPage = () => {
 
   return (
     <Container>
+       {/* TODO: Update margin */}
+       <br></br>
       {!book && !showAllBooks ? (
         <>
           <Typography variant="h4" gutterBottom>Book Club!</Typography>

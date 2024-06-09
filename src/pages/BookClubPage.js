@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Button, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import styles from './BookClubPage.module.css'; // Import the modular stylesheet
 
 // Book recommendations object
 const bookRecommendations = {
@@ -31,6 +32,7 @@ const BookClubPage = () => {
   const [book, setBook] = useState(null);
   const [showAllBooks, setShowAllBooks] = useState(false);
 
+  // Function to handle the selection of a topic
   const handleTopicSelection = (topic) => {
     setSelectedTopic(topic);
     const books = bookRecommendations[topic];
@@ -39,12 +41,14 @@ const BookClubPage = () => {
     setBook(randomBook);
   };
 
+  // Function to handle selecting another book
   const handleAnotherBook = () => {
     // Call setSelected to generate another book recommendation for the user
     setSelectedTopic(null);
     setBook(null);
   };
 
+  // Function to handle showing all books
   const handleSeeAllBooks = () => {
     setShowAllBooks(!showAllBooks);
   };
@@ -57,7 +61,7 @@ const BookClubPage = () => {
         <>
           <Typography variant="h4" gutterBottom>Book Club!</Typography>
           <Typography gutterBottom>Please select a category to receive a book recommendation from a list of my favorite reads!</Typography>
-          <Button variant="contained" onClick={handleSeeAllBooks}>
+          <Button variant="contained" onClick={handleSeeAllBooks} className={styles.seeAllBooksButton}>
             See All Books
           </Button><br></br><br></br>
           <Button variant="contained" onClick={() => handleTopicSelection('Self-Improvement')}>
@@ -73,7 +77,7 @@ const BookClubPage = () => {
       ) : showAllBooks ? (
         <>
         <br></br>
-          <Button variant="contained" onClick={handleSeeAllBooks}>
+          <Button variant="contained" onClick={handleSeeAllBooks} className={styles.seeAllBooksButton}>
             Back to Categories
           </Button>
           {Object.keys(bookRecommendations).map((category) => (
@@ -96,7 +100,7 @@ const BookClubPage = () => {
                         <Typography variant="body2" color="text.secondary">
                           {book.author}
                         </Typography>
-                        <Button variant="contained" href={book.link} target="_blank">Buy on Amazon</Button>
+                        <Button variant="contained" href={book.link} target="_blank" className={styles.buyButton}>Buy on Amazon</Button>
                       </CardContent>
                     </Card>
                   </li>
@@ -120,9 +124,9 @@ const BookClubPage = () => {
             <Typography variant="body2" color="text.secondary">
               {book.author}
             </Typography>
-            <Button variant="contained" href={book.link} target="_blank">Buy on Amazon</Button>
-            <Button variant="contained" onClick={handleAnotherBook}>Select Another Book?</Button>
-            <Button variant="contained" onClick={handleSeeAllBooks}>See All Books</Button>
+            <Button variant="contained" href={book.link} target="_blank" className={styles.buyButton}>Buy on Amazon</Button>
+            <Button variant="contained" onClick={handleAnotherBook} className={styles.anotherBookButton}>Select Another Book?</Button>
+            <Button variant="contained" onClick={handleSeeAllBooks} className={styles.seeAllBooksButton}>See All Books</Button>
           </CardContent>
         </Card>
       )}

@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Grid, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import styles from './HomePage.module.css';
+import avatarImage from '../images/avatar.png';
+
 
 const HomePage = () => {
   return (
@@ -20,7 +22,7 @@ const HomePage = () => {
             </div>
           </Grid>
           <Grid item xs={12} md={6}>
-            <img src="path/to/your/image.jpg" alt="Hero" className={styles.heroImage} />
+            <img src={avatarImage} alt="Hero" className={styles.heroImage} />
           </Grid>
         </Grid>
       </Container>

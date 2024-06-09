@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
 import { Container, Button, Typography, Card, CardContent, CardMedia } from '@mui/material';
 
+// Book recommendations object
 const bookRecommendations = {
+  // Create book-topic category & book array key-value
   'Physical Health & Wellness': [
-    { title: 'Health At Every Size', author: 'Lindo Bacon', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'Intuitive Eating', author: 'Evelyn Tribole & Elyse Resch', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'Body Respect', author: 'Lindo Bacon', image: 'path/to/image.jpg', link: 'https://www.amazon.com' }
+    // TODO add image links & update amazon direct links to purchase!
+    { title: 'Health At Every Size', author: 'Lindo Bacon', image: '', link: 'https://www.amazon.com' },
+    { title: 'Intuitive Eating', author: 'Evelyn Tribole & Elyse Resch', image: '', link: 'https://www.amazon.com' },
+    { title: 'Body Respect', author: 'Lindo Bacon', image: '', link: 'https://www.amazon.com' }
   ],
   'Digital Minimalism': [
-    { title: 'Digital Minimalism', author: 'Cal Newport', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'Deep Work', author: 'Cal Newport', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'A World Without Email', author: 'Cal Newport', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'Stolen Focus', author: 'Johann Hari', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'The Shallows', author: 'Nicholas Carr', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'Irresistible', author: 'Adam Alter', image: 'path/to/image.jpg', link: 'https://www.amazon.com' }
+    { title: 'Digital Minimalism', author: 'Cal Newport', image: '', link: 'https://www.amazon.com' },
+    { title: 'Deep Work', author: 'Cal Newport', image: '', link: 'https://www.amazon.com' },
+    { title: 'A World Without Email', author: 'Cal Newport', image: '', link: 'https://www.amazon.com' },
+    { title: 'Stolen Focus', author: 'Johann Hari', image: '', link: 'https://www.amazon.com' },
+    { title: 'The Shallows', author: 'Nicholas Carr', image: '', link: 'https://www.amazon.com' },
+    { title: 'Irresistible', author: 'Adam Alter', image: '', link: 'https://www.amazon.com' }
   ],
   'Self-Improvement': [
-    { title: 'The Power of Now', author: 'Eckhart Tolle', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'Quarterlife', author: 'Satya Doyle Bock', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'How to Be an Imperfectionist', author: 'Stephen Guise', image: 'path/to/image.jpg', link: 'https://www.amazon.com' },
-    { title: 'Atomic Habits', author: 'James Clear', image: 'path/to/image.jpg', link: 'https://www.amazon.com' }
+    { title: 'The Power of Now', author: 'Eckhart Tolle', image: '', link: 'https://www.amazon.com' },
+    { title: 'Quarterlife', author: 'Satya Doyle Bock', image: '', link: 'https://www.amazon.com' },
+    { title: 'How to Be an Imperfectionist', author: 'Stephen Guise', image: '', link: 'https://www.amazon.com' },
+    { title: 'Atomic Habits', author: 'James Clear', image: '', link: 'https://www.amazon.com' }
   ]
 };
 
@@ -30,11 +33,13 @@ const BookClubPage = () => {
   const handleTopicSelection = (topic) => {
     setSelectedTopic(topic);
     const books = bookRecommendations[topic];
+    // Using Math.random fucntion to select random book when user selects a topic button
     const randomBook = books[Math.floor(Math.random() * books.length)];
     setBook(randomBook);
   };
 
   const handleAnotherBook = () => {
+    // Call setSelected to generate another book recommendation for the user
     setSelectedTopic(null);
     setBook(null);
   };
@@ -44,6 +49,7 @@ const BookClubPage = () => {
       {!book ? (
         <>
           <Typography variant="h4" gutterBottom>Book Club!</Typography>
+          <Typography variant="p" gutterBottom>Please select a category to receive a book recommendation from a list of my favorite reads!</Typography><br></br>
           <Button variant="contained" onClick={() => handleTopicSelection('Physical Health & Wellness')}>
             Physical Health & Wellness
           </Button>

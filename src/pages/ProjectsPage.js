@@ -1,26 +1,24 @@
 import React from 'react';
 import { Container, Grid, Card, CardMedia, CardContent, CardActions, Button, Typography } from '@mui/material';
+import styles from './ProjectsPage.module.css';
 
 const projects = [
-  { id: 1, title: 'Assignment #1', description: 'An interactive greeting program and random MadLib story generator using core JS principles!', image: '' },
-  { id: 2, title: 'Assignment #3', description: 'An interactive React app that allows users to create a dynamic MadLib story & RGB color blender!', image: '' },
-  { id: 3, title: 'Assignment #6', description: 'An interactive React app that displays CTA route information using parameterized styles and locally-scoped CSS rules!', image: '' },
+  { id: 1, title: 'Project One', description: 'Description of project one', image: 'path/to/image1.jpg' },
+  { id: 2, title: 'Project Two', description: 'Description of project two', image: 'path/to/image2.jpg' },
+  { id: 3, title: 'Project Three', description: 'Description of project three', image: 'path/to/image3.jpg' },
 ];
 
 const ProjectsPage = () => {
   return (
     <Container>
-      {/* TODO: Not kosher/good practice to use break; add margin to container */}
-      <br></br>
       <Grid container spacing={4}>
         {projects.map(project => (
           <Grid item key={project.id} xs={12} sm={6} md={4}>
-            <Card>
+            <Card className={styles.card}>
               <CardMedia
-                component="img"
-                height="140"
+                className={styles.media}
                 image={project.image}
-                alt={project.title}
+                title={project.title}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -30,7 +28,7 @@ const ProjectsPage = () => {
                   {project.description}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions className={styles.cardActions}>
                 <Button size="small" variant="contained">See More</Button>
               </CardActions>
             </Card>

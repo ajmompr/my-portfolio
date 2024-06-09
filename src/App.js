@@ -5,7 +5,14 @@ import './App.css';
 
 function App() {
   return (
-   
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/bookclub" element={<BookClubPage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -30,3 +30,9 @@
 .bookClubButton {
   font-size: 2rem;
 }
+
+.projectButton:hover,
+.bookClubButton:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy; 
+}

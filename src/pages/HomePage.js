@@ -7,7 +7,7 @@ const HomePage = () => {
     <Container>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} md={6}>
-          <Typography variant="h2">Welcome to My Portfolio</Typography>
+          <Typography variant="h2">Hi! I'm Alex Mompremier </Typography>
           <Typography variant="body1">
             <Button component={Link} to="/about">About Me</Button>
             <Button component={Link} to="/projects">Projects</Button>

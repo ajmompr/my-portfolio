@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Grid, Card, CardMedia, CardContent, CardActions, Button, Typography } from '@mui/material';
 
 const projects = [
-  { id: 1, title: 'Assignment One', description: 'An interactive greeting program and random MadLib story generator using core JS principles!', image: '' },
-  { id: 2, title: 'Assignment Three', description: 'An interactive React app that allows users to create a dynamic MadLib story & RGB color blender!', image: '' },
-  { id: 3, title: 'Assignment Six', description: 'An interactive React app that displays CTA route information using parameterized styles and locally-scoped CSS rules!', image: '' },
+  { id: 1, title: 'Assignment #1', description: 'An interactive greeting program and random MadLib story generator using core JS principles!', image: '' },
+  { id: 2, title: 'Assignment #3', description: 'An interactive React app that allows users to create a dynamic MadLib story & RGB color blender!', image: '' },
+  { id: 3, title: 'Assignment #6', description: 'An interactive React app that displays CTA route information using parameterized styles and locally-scoped CSS rules!', image: '' },
 ];
 
 const ProjectsPage = () => {

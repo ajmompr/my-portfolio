@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import styles from './Navbar.module.css'; // Import the modular stylesheet
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
   return (

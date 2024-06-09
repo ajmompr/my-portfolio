@@ -5,8 +5,8 @@ import styles from './HomePage.module.css';
 
 const HomePage = () => {
   return (
-    <div className={styles.introText}> 
-      <Typography variant="h3">Hi 👋🏿 My name is Alex Mompremier!</Typography>
+    <div className={styles.introContainer}> 
+      <Typography variant="h1" className={styles.introText}>Hi 👋🏿 My name is Alex Mompremier!</Typography>
       <Container className={styles.hero}>
         {/* TODO: Update margin */}
         <br></br>

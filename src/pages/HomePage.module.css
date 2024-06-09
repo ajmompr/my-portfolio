@@ -1,7 +1,10 @@
-.introText{
+.introContainer{
   align-items: center;
   justify-content: space-between;
   padding: 16px;
+}
+.introText{
+  font-size: 4rem;
 }
 .hero {
   display: flex;
@@ -21,9 +24,9 @@
 
 
 .projectButton {
-
+  font-size: 2rem;
 }
 
 .bookClubButton {
-
+  font-size: 2rem;
 }

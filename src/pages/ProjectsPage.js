@@ -2,8 +2,8 @@ import React from 'react';
 import { Container, Grid, Card, CardMedia, CardContent, CardActions, Button, Typography } from '@mui/material';
 
 const projects = [
-  { id: 1, title: 'Assignment One', description: 'An interactive greeting program and random story generator using JS', image: '' },
-  { id: 2, title: 'Assignment Three', description: 'Description of project two', image: '' },
+  { id: 1, title: 'Assignment One', description: 'An interactive greeting program and random MadLib story generator using core JS principles!', image: '' },
+  { id: 2, title: 'Assignment Three', description: 'An interactive React app that allows users to create a dynamic MadLib story & RGB color blender!', image: '' },
   { id: 3, title: 'Assignment Six', description: 'Description of project three', image: '' },
 ];
 

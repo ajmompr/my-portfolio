@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Grid, Card, CardMedia, CardContent, CardActions, Button, Typography } from '@mui/material';
 
 const projects = [
-  { id: 1, title: 'Project One', description: 'Description of project one', image: '' },
-  { id: 2, title: 'Project Two', description: 'Description of project two', image: '' },
-  { id: 3, title: 'Project Three', description: 'Description of project three', image: '' },
+  { id: 1, title: 'Assignment One', description: 'Description of project one', image: '' },
+  { id: 2, title: 'Assignment Three', description: 'Description of project two', image: '' },
+  { id: 3, title: 'Assignment Six', description: 'Description of project three', image: '' },
 ];
 
 const ProjectsPage = () => {

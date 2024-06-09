@@ -1,0 +1,21 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.heroText {
+  max-width: 500px;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 500px;
+}
+
+.heroButtons {
+  margin-top: 8px;
+}
+
+/* Add more styles as needed */

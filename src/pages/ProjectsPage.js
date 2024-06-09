@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Card, CardMedia, CardContent, CardActions, Button, Typography } from '@mui/material';
 
 const projects = [
-  { id: 1, title: 'Assignment One', description: 'Description of project one', image: '' },
+  { id: 1, title: 'Assignment One', description: 'An interactive greeting program and random story generator using JS', image: '' },
   { id: 2, title: 'Assignment Three', description: 'Description of project two', image: '' },
   { id: 3, title: 'Assignment Six', description: 'Description of project three', image: '' },
 ];
@@ -10,6 +10,8 @@ const projects = [
 const ProjectsPage = () => {
   return (
     <Container>
+      {/* TODO: Not kosher/good practice to use break; add margin to container */}
+      <br></br>
       <Grid container spacing={4}>
         {projects.map(project => (
           <Grid item key={project.id} xs={12} sm={6} md={4}>

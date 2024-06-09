@@ -1,3 +1,8 @@
+.introText{
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
 .hero {
   display: flex;
   align-items: center;
@@ -14,7 +19,11 @@
   max-width: 500px;
 }
 
-.heroButtons {
-  margin-top: 8px;
+
+.projectButton {
+
 }
 
+.bookClubButton {
+
+}

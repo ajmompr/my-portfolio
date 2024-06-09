@@ -4,7 +4,7 @@ import { Container, Grid, Card, CardMedia, CardContent, CardActions, Button, Typ
 const projects = [
   { id: 1, title: 'Assignment One', description: 'An interactive greeting program and random MadLib story generator using core JS principles!', image: '' },
   { id: 2, title: 'Assignment Three', description: 'An interactive React app that allows users to create a dynamic MadLib story & RGB color blender!', image: '' },
-  { id: 3, title: 'Assignment Six', description: 'Description of project three', image: '' },
+  { id: 3, title: 'Assignment Six', description: 'An interactive React app that displays CTA route information using parameterized styles and locally-scoped CSS rules!', image: '' },
 ];
 
 const ProjectsPage = () => {

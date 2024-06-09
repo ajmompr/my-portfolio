@@ -29,11 +29,12 @@ const bookRecommendations = {
 const BookClubPage = () => {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [book, setBook] = useState(null);
+  const [showAllBooks, setShowAllBooks] = useState(false);
 
   const handleTopicSelection = (topic) => {
     setSelectedTopic(topic);
     const books = bookRecommendations[topic];
-    // Using Math.random fucntion to select random book when user selects a topic button
+    // Using Math.random function to select a random book when a user selects a topic button
     const randomBook = books[Math.floor(Math.random() * books.length)];
     setBook(randomBook);
   };
@@ -44,12 +45,16 @@ const BookClubPage = () => {
     setBook(null);
   };
 
+  const handleSeeAllBooks = () => {
+    setShowAllBooks(!showAllBooks);
+  };
+
   return (
     <Container>
-      {!book ? (
+      {!book && !showAllBooks ? (
         <>
           <Typography variant="h4" gutterBottom>Book Club!</Typography>
-          <Typography variant="p" gutterBottom>Please select a category to receive a book recommendation from a list of my favorite reads!</Typography><br></br>
+          <Typography gutterBottom>Please select a category to receive a book recommendation from a list of my favorite reads!</Typography>
           <Button variant="contained" onClick={() => handleTopicSelection('Physical Health & Wellness')}>
             Physical Health & Wellness
           </Button>
@@ -59,6 +64,43 @@ const BookClubPage = () => {
           <Button variant="contained" onClick={() => handleTopicSelection('Self-Improvement')}>
             Self-Improvement
           </Button>
+          <Button variant="contained" onClick={handleSeeAllBooks}>
+            See All Books
+          </Button>
+        </>
+      ) : showAllBooks ? (
+        <>
+          <Button variant="contained" onClick={handleSeeAllBooks}>
+            Back to Categories
+          </Button>
+          {Object.keys(bookRecommendations).map((category) => (
+            <div key={category}>
+              <Typography variant="h5">{category}</Typography>
+              <ul>
+                {bookRecommendations[category].map((book, index) => (
+                  <li key={index}>
+                    <Card>
+                      <CardMedia
+                        component="img"
+                        height="140"
+                        image={book.image}
+                        alt={book.title}
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          {book.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {book.author}
+                        </Typography>
+                        <Button variant="contained" href={book.link} target="_blank">Buy on Amazon</Button>
+                      </CardContent>
+                    </Card>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </>
       ) : (
         <Card>
@@ -77,6 +119,7 @@ const BookClubPage = () => {
             </Typography>
             <Button variant="contained" href={book.link} target="_blank">Buy on Amazon</Button>
             <Button variant="contained" onClick={handleAnotherBook}>Select Another Book?</Button>
+            <Button variant="contained" onClick={handleSeeAllBooks}>See All Books</Button>
           </CardContent>
         </Card>
       )}

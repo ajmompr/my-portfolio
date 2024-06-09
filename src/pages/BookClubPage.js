@@ -57,21 +57,22 @@ const BookClubPage = () => {
         <>
           <Typography variant="h4" gutterBottom>Book Club!</Typography>
           <Typography gutterBottom>Please select a category to receive a book recommendation from a list of my favorite reads!</Typography>
-          <Button variant="contained" onClick={() => handleTopicSelection('Physical Health & Wellness')}>
-            Physical Health & Wellness
-          </Button>
-          <Button variant="contained" onClick={() => handleTopicSelection('Digital Minimalism')}>
-            Digital Minimalism
-          </Button>
-          <Button variant="contained" onClick={() => handleTopicSelection('Self-Improvement')}>
-            Self-Improvement
-          </Button>
           <Button variant="contained" onClick={handleSeeAllBooks}>
             See All Books
-          </Button>
+          </Button><br></br><br></br>
+          <Button variant="contained" onClick={() => handleTopicSelection('Self-Improvement')}>
+            Self-Improvement
+          </Button><br></br><br></br>
+          <Button variant="contained" onClick={() => handleTopicSelection('Digital Minimalism')}>
+            Digital Minimalism
+          </Button><br></br><br></br>
+          <Button variant="contained" onClick={() => handleTopicSelection('Physical Health & Wellness')}>
+            Physical Health & Wellness
+          </Button><br></br><br></br>
         </>
       ) : showAllBooks ? (
         <>
+        <br></br>
           <Button variant="contained" onClick={handleSeeAllBooks}>
             Back to Categories
           </Button>

@@ -3,9 +3,10 @@ import { Container, Grid, Card, CardMedia, CardContent, CardActions, Button, Typ
 import styles from './ProjectsPage.module.css';
 
 const projects = [
-  { id: 1, title: 'Assignment #1', description: 'An interactive greeting program and random MadLib story generator using core JS principles!', image: '' },
-  { id: 2, title: 'Assignment #3', description: 'An interactive React app that allows users to create a dynamic MadLib story & RGB color blender!', image: '' },
-  { id: 3, title: 'Assignment #6', description: 'An interactive React app that displays CTA route information using parameterized styles and locally-scoped CSS rules!', image: '' },
+  { id: 1, title: 'Assignment #1', description: 'An interactive greeting program and random MadLib story generator using core JS principles!', image: '', url: 'https://amompremier-assignment-1.fly.dev/' },
+  { id: 2, title: 'Assignment #3A', description: 'An interactive React app that allows users to create a dynamic MadLib story!', image: '', url: 'https://assignment-3-madlib-app.fly.dev/' },
+  { id: 3, title: 'Assignment #3B', description: 'An interactive React app that allows users to create new colors with an RGB color blender!', image: '', url: 'https://assignment-3-color-app.fly.dev/' },
+  { id: 4, title: 'Assignment #6', description: 'An interactive React app that displays CTA route information using parameterized styles and locally-scoped CSS rules!', image: '', url: 'https://assignment-6.fly.dev/' },
 ];
 
 const ProjectsPage = () => {
@@ -31,7 +32,15 @@ const ProjectsPage = () => {
                 </Typography>
               </CardContent>
               <CardActions className={styles.cardActions}>
-                <Button size="small" variant="contained">See More</Button>
+                <Button
+                  size="small"
+                  variant="contained"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  See More
+                </Button>
               </CardActions>
             </Card>
           </Grid>

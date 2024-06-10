@@ -1,15 +1,9 @@
 /* BookClubPage.module.css */
 
 .buyButton {
-  margin-top: 20px; 
-  margin-right: 10px; 
+  margin-right: 10px !important; 
 }
 
 .anotherBookButton {
-  margin-top: 20px; 
-  margin-right: 10px;
-}
-
-.seeAllBooksButton {
-  margin-top: 20px;
+  margin-right: 10px !important;
 }

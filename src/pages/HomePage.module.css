@@ -4,7 +4,7 @@
   padding: 16px;
 }
 .introText{
-  font-size: 4rem;
+  font-size: 3rem !important;
 }
 .hero {
   display: flex;
@@ -24,15 +24,15 @@
 
 
 .projectButton {
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 
 .bookClubButton {
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 
 .projectButton:hover,
 .bookClubButton:hover {
-  text-decoration: underline;
-  text-decoration-style: wavy; 
+  text-decoration: underline !important;
+  text-decoration-style: wavy !important;
 }

@@ -8,7 +8,7 @@ const Navbar = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" style={{ flexGrow: 1 }}>
-          My Portfolio
+          My React Portfolio
         </Typography>
         <Button color="inherit" component={Link} to="/" className={styles.navButton}>Home</Button>
         <Button color="inherit" component={Link} to="/projects" className={styles.navButton}>Projects</Button>
